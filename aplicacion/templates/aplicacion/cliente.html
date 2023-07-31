@@ -1,0 +1,21 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block contenido %}
+    <h1>Cliente</h1>
+{% endblock contenido %}
+
+{% block titulo %}
+    Cliente
+{% endblock titulo %}
+
+{% block formulario %}
+<h2> Registrarse </h2>
+<form action="" method="post">
+    {% csrf_token %}
+   <p>Nombre :<input type="text" name="nombre" id="nombre"></p>
+   <p>Apellido :<input type="text" name="apellido" id="apellido"></p>
+   <p>Telefono :<input type="number" name="Telefono" id="Telefono"></p>
+   <input type="submit" value="Enviar">
+</form>
+{% endblock formulario %}
